@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: f9f9fb;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: 'Cal Sans', sans-serif;
+  color: rgb(2, 61, 32);
+}
+
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px; /* Limita a largura máxima */
+  margin: 0 auto;     /* Centraliza na tela */
+}
+
+.faq-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.faq-card:hover {
+  transform: scale(1.02);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.message {
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  max-width: 100%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.user-message {
+  background-color: #e1ffc7;
+  align-self: flex-start;
+}
+
+.response-message {
+  background-color: #f1f0f0;
+  align-self: flex-end;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .faq-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+  }
+}

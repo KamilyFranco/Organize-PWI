@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta | Organize</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../public/css/create-account.css">
+  <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+ <script src="./js/create-account.js" defer></script>
+
+</head>
+<body>
+  <div class="container-criar-conta">
+    <div class="lado-esquerdo">
+      <div class="logo-area">
+        <img src="/organize/public/imgs/favicon.png" alt="Logo Organize" class="logo">
+        <h3>Organize</h3>
+      </div>
+      
+      <div class="texto-impacto">
+        <h1>O melhor da</h1>
+        <h1>sua <span class="destaque-vermelho">confeitaria</span></h1>
+        <h1>em um só lugar</h1>
+      </div>
+      
+      <div class="beneficios">
+        <div class="beneficio-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Gerencie seus pedidos facilmente</p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Controle seu estoque de forma eficiente</p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Aumente a produtividade da sua equipe</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lado-direito">
+      <div class="card-formulario">
+        <form class="formulario">
+          <h2>Crie a conta da sua confeitaria</h2>
+          <p class="subtitulo">Preencha os dados abaixo para começar</p>
+          
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nome completo" required id="nome">
+          </div>
+          
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="E-mail" required id="email">
+          </div>
+          
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" required id="senha">
+            <i class="fas fa-eye toggle-password" id="toggle-password"></i>
+          </div>
+          
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Confirme sua senha" required id="confirmaSenha">
+          </div>
+          
+          <div class="input-group">
+            <i class="fas fa-store"></i>
+            <input type="text" placeholder="Nome da confeitaria" required id="nomeConfeitaria">
+          </div>
+          
+          
+          <div class="input-group">
+            <i class="fas fa-tags"></i>
+            <select required id="plano">
+              <option value="" disabled selected>Escolha um plano</option>
+              <option value="7dias">7 dias gratuitos</option>
+              <option value="semanal">Plano Semanal</option>
+              <option value="mensal">Plano Mensal</option>
+            </select>
+          </div>
+
+          <div class="termos">
+            <input type="checkbox" id="aceito-termos" required>
+            <label for="aceito-termos">Li e aceito os <a href="#">termos de uso</a> e <a href="#">política de privacidade</a></label>
+          </div>
+
+            
+          <button type="submit" id="cadastrar">
+            <i class="fas fa-user-plus"></i>
+            Criar minha conta
+          </button>
+          
+          <div class="message-group">
+            <i class="fas fa-info-circle"></i>
+            <span id="message-text"></span>
+          </div>
+
+          <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Script simples para mostrar/ocultar a senha
+    document.getElementById('toggle-password').addEventListener('click', function() {
+      const senhaInput = document.getElementById('senha');
+      if (senhaInput.type === 'password') {
+        senhaInput.type = 'text';
+        this.classList.remove('fa-eye');
+        this.classList.add('fa-eye-slash');
+      } else {
+        senhaInput.type = 'password';
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-eye');
+      }
+    });
+  </script>
+</body>
+</html>

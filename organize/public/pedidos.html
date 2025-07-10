@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Encomendas</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../public/css/orders.css" />
+  <link
+    rel="icon"
+    href="/organize/public/imgs/favicon.png"
+    type="image/png"
+  />
+  <script src="./js/pedidos.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="imagem-lado"></div>
+
+    <div class="formulario-lado">
+      <form class="form-box" id="orderForm" action="">
+        <h2>Cadastro de Encomendas</h2>
+        <p class="form-subtitle">
+          Preencha os dados para registrar uma nova encomenda
+        </p>
+
+        <div class="form-group">
+          <label for="cliente" class="required">Nome do Cliente</label>
+          <input
+            type="text"
+            id="cliente"
+            name="cliente"
+            required
+            placeholder="Digite o nome completo do cliente"
+          />
+          <span class="error-message">Por favor, insira o nome do cliente</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail do Cliente</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="cliente@exemplo.com"
+            />
+            <span class="error-message">E-mail inválido</span>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(11) 99999-9999"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="required">Escolha os produtos e quantidades</label>
+          <div id="produtos-disponiveis">
+            <div class="produtos-container">
+              <!-- Produtos vão ser inseridos aqui dinamicamente pelo JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data" class="required">Data do Pedido</label>
+            <input type="date" id="data" name="data" required />
+            <span class="error-message">Selecione uma data válida</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status da Encomenda</label>
+          <select id="status" name="status">
+            <option value="pendente" selected>Pendente</option>
+            <option value="em_andamento">Em Andamento</option>
+            <option value="feito">Feito</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="obs">Observações</label>
+          <textarea
+            id="obs"
+            name="obs"
+            rows="4"
+            placeholder="Informações adicionais sobre a encomenda..."
+          ></textarea>
+        </div>
+
+        <button type="button" id="submitBtn">Cadastrar Encomenda</button>
+
+        <div class="message-group">
+          <i class="fas fa-info-circle"></i>
+          <span id="message-text"></span>
+        </div>
+
+        <div class="form-footer">
+          <a href="#" onclick="limparFormulario()">Limpar formulário</a> |
+          <a href="pedidos-cadastrados.html">Ver encomendas cadastradas</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

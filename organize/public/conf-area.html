@@ -1,0 +1,125 @@
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Área Administrativa - Organize</title>
+    <script src="../public/js/admin-area.js" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/admin-area.css">
+    <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="logo-admin">Organize</div>
+      
+      <nav>
+        <a href="stock.html">Produtos</a>
+        <a href="relatorio.html">Relatórios</a>
+        <a href="pedidos.html">Encomendas</a>
+      </nav>
+      
+     <div class="perfil-area">
+      <a href="update-user.html" class="perfil-icon">A</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+
+    </header>
+
+    <main>
+      <div class="boas-vindas">Bem-vinda, Confeitaria!</div>
+
+      <div class="painel-opcoes">
+       <div class="card" onclick="location.href='stock.html'">
+          <h3>Produtos</h3>
+          <p>Gerencie os produtos disponíveis e acompanhe níveis de reposição.</p>
+        </div>
+
+        <div class="card" onclick="location.href='relatorio.html'">
+          <h3>Relatórios</h3>
+          <p>Visualize o desempenho da confeitaria com relatórios atualizados.</p>
+        </div>
+
+        <div class="card" onclick="location.href='pedidos.html'">
+          <h3>Encomendas</h3>
+          <p>Cadastre e acompanhe pedidos feitos por clientes.</p>
+        </div>
+
+      </div>
+
+      <div class="painel-informacoes">
+        <!-- Métricas -->
+        <div class="info-box">
+          <h4>Métricas Rápidas</h4>
+          <div class="metricas">
+            <div class="metrica">📦 Produtos no estoque: <strong></strong></div>
+            <div class="metrica">⚠️ Produtos baixos: <strong></strong></div>
+            <div class="metrica">💰 Vendas hoje: <strong></strong></div>
+          </div>
+        </div>
+
+        <!-- Notificações -->
+        <div class="info-box notificacoes">
+          <h4>Notificações</h4>
+          <ul></ul>
+        </div>
+
+        <!-- Atalhos -->
+        <div class="info-box atalhos">
+          <h4>Acesso Rápido</h4>
+         <ul>
+          <li><button onclick="location.href='pedidos.html'">+ Nova encomenda</button></li>
+          <li><button onclick="location.href='stock.html'">+ Novo Produto</button></li>
+          <li><button onclick="location.href='relatorio.html'">+ Relatório</button></li>
+        </ul>
+
+        </div>
+
+        <!-- Calendário -->
+        <div class="info-box calendario">
+          <h4>Calendário</h4>
+          <p>📅 Hoje é: <strong><span id="dataAtual"></span></strong></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-site">
+    <div class="footer-conteudo">
+      <div class="footer-coluna">
+        <h3>Organize</h3>
+        <p>Simplificando sua gestão administrativa.</p>
+      </div>
+      <div class="footer-coluna">
+        <h4>Links úteis</h4>
+        <ul>
+          <li><a href="stock.html">Produtos</a></li>
+          <li><a href="relatorio.html">Relatórios</a></li>
+          <li><a href="index.html">Suporte</a></li>
+          <li><a href="pedidos.html">Encomendas</a></li>
+        </ul>
+      </div>
+      <div class="footer-coluna">
+        <h4>Contato</h4>
+        <p>📞 (11) 99999-0000</p>
+        <p>📧 suporte@organize.com</p>
+        <p>🏢 Rua da Gestão, 123 - São Paulo, SP</p>
+      </div>
+    </div>
+    <div class="footer-rodape">
+      <p>&copy; 2025 Organize. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+    <script>
+      // Coloca data atual no calendário
+      const hoje = new Date();
+      const dataFormatada = hoje.toLocaleDateString('pt-BR', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+      document.getElementById('dataAtual').textContent = dataFormatada;
+    </script>
+
+  </body>
+  </html>

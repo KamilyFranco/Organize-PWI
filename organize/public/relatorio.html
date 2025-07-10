@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Relatórios - Sistema Admin</title>
+    <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/relatorio.css" />
+    <script src="./js/relatorio.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-admin">Relatórios</div>
+        <button class="voltar-btn" onclick="window.location.href='conf-area.html'">← Voltar</button>
+    </header>
+
+    <main>
+        <h1 class="titulo-pagina">Relatórios do Sistema</h1>
+
+        <!-- Filtros -->
+        <div class="filtros">
+            <div class="filtro-grupo">
+                <label for="data-inicio">Data Início:</label>
+                <input type="date" id="data-inicio" value="2024-01-01" />
+            </div>
+            <div class="filtro-grupo">
+                <label for="data-fim">Data Fim:</label>
+                <input type="date" id="data-fim" value="2030-12-31" />
+            </div>
+            <button class="atualizar-btn" onclick="window.location.reload()">Atualizar Dados</button>
+        </div>
+
+        <!-- Resumo -->
+        <div class="resumo">
+            <div class="resumo-card">
+                <div class="resumo-numero" id="total-encomendas">0</div>
+                <div class="resumo-label">Total Encomendas</div>
+            </div>
+            <div class="resumo-card">
+                <div class="resumo-numero" id="produtos-saidos">0</div>
+                <div class="resumo-label">Produtos Saídos</div>
+            </div>
+            <div class="resumo-card">
+                <div class="resumo-numero" id="valor-total">R$ 0,00</div>
+                <div class="resumo-label">Valor Total</div>
+            </div>
+        </div>
+
+        <!-- Encomendas do Dia -->
+        <div class="relatorio-secao">
+            <div class="secao-header">
+                <h3>Encomendas do Dia</h3>
+                <p>Lista completa das encomendas realizadas no período selecionado</p>
+            </div>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-encomendas">
+                        <!-- Encomendas vão aparecer aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Produtos Saídos do Estoque -->
+        <div class="relatorio-secao">
+            <div class="secao-header">
+                <h3>Produtos Saídos do Estoque</h3>
+                <p>Controle de saída de produtos e ingredientes do estoque</p>
+            </div>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Quantidade Saída</th>
+                            <th>Estoque Atual</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-estoque">
+                        <!-- Produtos saídos vão aparecer aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

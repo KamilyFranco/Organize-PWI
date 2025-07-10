@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Organize</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+     <script src="./js/login.js" defer></script>
+</head>
+<body>
+    <div class="container-login">
+        <div class="card-login">
+            <div class="logo-area">
+                <img src="/organize/public/imgs/favicon.png" alt="Logo Organize" class="logo">
+                <h1>Organize</h1>
+            </div>
+            
+            <div class="welcome-message">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Que bom ver você aqui novamente!</p>
+            </div>
+            
+            <form class="formulario">
+                <h2>Entrar na minha conta</h2>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="E-mail" required id="email">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" required id="senha">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-user-tag"></i>
+                   <select required id="tipoUsuario">
+                    <option value="" disabled selected>Tipo de usuário</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Confeitaria">Confeitaria</option>
+                    <option value="Funcionario">Funcionário</option>
+                </select>
+
+                </div>
+                
+                <div class="links">
+                    <a href="update-user.html" class="esqueci-senha">Esqueci minha senha</a>
+                </div>
+                
+                <button type="submit" id="Entrar">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Entrar
+                </button>
+
+                <div class="message-group">
+                <i class="fas fa-info-circle"></i>
+                <span id="message-text"></span>
+                </div>
+                
+                <div class="criar-conta">
+                    <p>Não tem uma conta? <a href="create-account.html">Criar agora</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

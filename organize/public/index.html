@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organize</title>
+  <link rel="stylesheet" href="../public/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Inter&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+  <script src="./js/index.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-conteudo">
+      <div class="logo">Organize Confeitaria</div>
+      <nav>
+        <a href="#porque-escolher">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+        <a href="login.html">Entrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="texto">
+      <h1>Simplifique a sua <span id='spanConf'>confeitaria<span></h1>
+      <button class="buttonComprarAgora">ASSINE AGORA</button>
+    </div>
+    <div class="imagem">
+      <img src="../public/imgs/doce-Photoroom.png" alt="Doce">
+    </div>
+  </main>
+
+  <!-- porque escolher - sobre -->
+  <section id="porque-escolher">
+  <h2>Por que escolher a <span class="destaque">Organize</span>?</h2>
+  <div class="beneficios">
+    <div class="beneficio">
+      <h3>Organização automatizada de encomendas</h3>
+      <p>O sistema permite registrar e acompanhar pedidos de forma clara e prática, 
+        evitando esquecimentos ou confusões comuns em anotações manuais. 
+        Isso garante que cada cliente receba sua encomenda corretamente e 
+        no prazo, melhorando a reputação do negócio.</p>
+    </div>
+    <div class="beneficio">
+      <h3>Controle inteligente de estoque</h3>
+      <p>Com o gerenciamento automatizado de ingredientes e materiais, a 
+        confeiteira sabe exatamente o que tem disponível e o que precisa repor. 
+        Isso evita desperdícios e faltas inesperadas, otimizando os custos e o tempo de produção.</p>
+    </div>
+    <div class="beneficio">
+      <h3>Lista de compras gerada automaticamente</h3>
+      <p>Com base nos pedidos cadastrados e ingredientes utilizados, o sistema gera uma lista de compras 
+        semanal. Isso facilita a reposição de insumos e evita esquecimentos ao fazer compras, economizando tempo e dinheiro.</p>
+    </div>
+    <div class="beneficio">
+      <h3>Simplicidade e usabilidade pensadas para o público</h3>
+      <p>Desenvolvido especialmente para quem tem pouca familiaridade com tecnologia, o sistema possui uma interface 
+        intuitiva e visual. Isso torna a experiência fácil, rápida e acessível, mesmo para quem nunca usou um sistema de gestão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- planos -->
+<section id="planos">
+  <h2>Escolha o plano ideal para você</h2>
+  <div class="cards-planos">
+
+    <div class="plano">
+      <h3>Mensal</h3>
+      <div class="preco">
+        <span class="valor">R$29,90</span>
+        <span class="mensalidade">/mês</span>
+      </div>
+      <button class="botao-plano">Assinar agora</button>
+    </div>
+
+    <div class="plano destaque">
+      <h3>Anual</h3>
+      <div class="preco">
+        <span class="valor">R$290</span>
+      </div>
+      <button class="botao-plano">Assinar agora</button>
+    </div>
+
+    <div class="plano">
+      <h3>Experimente por 7 dias</h3>
+      <p class="descricao-basica">Acesse todas as funcionalidades gratuitamente por 7 dias e veja como sua confeitaria pode evoluir.</p>
+      <button class="botao-plano">Começar teste</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- contato -->
+<section id="contato">
+  <h2>Entre em contato conosco!</h2>
+  <p class="info-contato"><a id="faqs" href="FAQs.html">Acesse aqui as perguntas mais frequentes</a></p>
+  <p class="info-contato">(11) 91234-5678</p>
+  <p class="info-contato">Rua das Confeitarias, 123 - São Paulo, SP</p>
+
+ <form class="form-contato" id="form-contato">
+  <input type="text" id="nomeContato" placeholder="Seu nome" required />
+  <input type="email" id="emailContato" placeholder="Seu e-mail" required />
+  <textarea id="mensagemContato" placeholder="Sua mensagem" required></textarea>
+  <button type="submit">Enviar</button>
+  <div id="mensagem-enviada" class="mensagem-sucesso">
+  Sua mensagem foi enviada com sucesso!
+</div>
+
+</form>
+
+</section>
+
+<!-- FAQs a baixo-->
+</body>
+</body>
+</html>
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Estoque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../public/css/stock.css">
+  <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+  <script src="./js/stock.js" defer></script>
+
+</head>
+<body>
+
+  <header class="header-estoque">
+    <h1>Organize - Controle de Produtos</h1>
+  </header>
+
+  <main class="container-estoque">
+
+    <!-- Lado esquerdo: Lista de produtos -->
+    <section class="lista-produtos">
+      <h2>Produtos em Estoque</h2>
+      <ul>
+       <!-- Lista vazia, será preenchida pelo JS -->
+      </ul>
+    </section>
+
+    <!-- Lado direito: Formulário -->
+    <section class="form-produto">
+      <h2>Gerenciar Produto</h2>
+      <form>
+        <label>Nome do produto:
+          <input type="text" placeholder="Ex: Cupcake de Morango" id="nome">
+        </label>
+
+        <label>Descrição:
+          <textarea rows="3" placeholder="Descreva o produto..." id="descricao"></textarea>
+        </label>
+
+        <label>Quantidade:
+          <input type="number" min="0" id="Qtd">
+        </label>
+
+        <label>Preço (R$):
+          <input type="number" step="0.01" min="0" id="preco">
+        </label>
+
+        <div class="botoes-form">
+          <button type="submit" class="btn-cadastrar">Adicionar</button>
+          <button type="button" class="btn-editar">Editar</button>
+          <button type="button" class="btn-deletar">Excluir</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

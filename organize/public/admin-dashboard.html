@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Administrador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/admin-dashboard.css">
+  <script src="./js/admin-dashboard.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="header-content">
+        <h1>Painel do Administrador</h1>
+        <p>Gerenciamento das confeitarias, permissões e mantenha o sistema organizado</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="cards-grid">
+        <!-- Card: Cadastrar novo admin -->
+        <section class="card">
+          <div class="card-header">
+            <div class="card-icon primary">👤</div>
+            <h3>Adicionar Novo Administrador</h3>
+          </div>
+          
+          <form id="admin-form">
+            <div class="form-group">
+              <label class="form-label" for="name">Nome completo</label>
+              <input 
+                type="text" 
+                id="name"
+                class="form-input" 
+                placeholder="Digite o nome completo" 
+                required 
+              />
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input 
+                type="email" 
+                id="email"
+                class="form-input" 
+                placeholder="Digite o email" 
+                required 
+              />
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="password">Senha</label>
+              <input 
+                type="password" 
+                id="password"
+                class="form-input" 
+                placeholder="Digite uma senha segura" 
+                required 
+              />
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">
+              Cadastrar Administrador
+            </button>
+
+            <div class="message-group" style="display: none;">
+              <span>💡</span>
+              <span id="message-text"></span>
+            </div>
+          </form>
+        </section>
+
+        <!-- Card: Confeitarias Ativas -->
+        <section class="card">
+          <div class="card-header">
+            <div class="card-icon success">👥</div>
+            <h3>Confeitarias Ativas</h3>
+          </div>
+
+          <div class="scroll-container" id="lista-confeitarias">
+            <div class="empty-state">
+              <div class="empty-state-icon">🏪</div>
+              <p>Nenhuma confeitaria cadastrada ainda</p>
+            </div>
+          </div>
+        </section>
+
+
+          <!-- Card: Métricas -->
+        <section class="card">
+          <div class="card-header">
+            <div class="card-icon warning">📊</div>
+            <h3>Resumo do Sistema</h3>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-label">Total de confeitarias</span>
+            <span class="stat-value total-confeitarias">0</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-label">Admins cadastrados</span>
+            <span class="stat-value total-admins">1</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-label">Mensagens recebidas</span>
+            <span class="stat-value total-messages">0</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-label">Mensagens não lidas</span>
+            <span class="stat-value unread-messages">0</span>
+          </div>
+        </section>
+
+        <!-- Card: Mensagens recebidas -->
+        <section class="card">
+          <div class="card-header">
+            <div class="card-icon info">📧</div>
+            <h3>Mensagens de Contato</h3>
+          </div>
+
+          <div class="messages-container" id="messages-container">
+            <div class="empty-state">
+              <div class="empty-state-icon">📬</div>
+              <p>Nenhuma mensagem recebida ainda</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-small marcar-lidas">
+                Marcar todas como lidas
+              </button>
+              <button class="btn btn-primary btn-small limpar-mensagens">
+                Limpar mensagens
+              </button>
+
+          </div>
+        </section>
+
+      
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-quote">"Uma boa gestão começa com bons acessos."</p>
+        <p class="footer-attribution">Equipe Organize</p>
+      </div>
+    </footer>
+  </div>
+
+ </body>
+</html>

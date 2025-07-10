@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 25px 50px 20px;
+    text-align: center;
+    background-color: rgb(2, 61, 32);
+  }
+  
+  /* Compensar a altura do header fixo */
+  main {
+    margin-top: 0px; /* ajuste esse valor conforme a altura real do seu header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: rgb(2, 61, 32);
+  }
+  
+ 
+  .header-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+  }
+
+  .logo {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .texto {
+    width: 50%;
+  }
+
+  .texto h1 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 108px;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    color: white;
+  }
+
+  .buttonComprarAgora {
+    display: inline-block;
+    padding: 24px 48px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+  }
+
+  .imagem {
+    width: 45%;
+  }
+
+  .imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #spanConf {
+  color: rgb(195, 25, 25);
+  font-weight: 800;
+  }
+
+
+  @media(max-width: 768px) {
+    main {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .texto, .imagem {
+      width: 100%;
+    }
+
+    .texto h1 {
+      font-size: 56px;
+    }
+
+    nav {
+      font-size: 12px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu-direita {
+      font-size: 12px;
+    }
+
+    .botao {
+      font-size: 14px;
+    }
+  }
+
+  #porque-escolher {
+    background-color: #f8f8f8;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  #porque-escolher h2 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: rgb(2, 61, 32);
+  }
+  
+  #porque-escolher .destaque {
+    color: rgb(195, 25, 25);
+  }
+  
+  .beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .beneficio {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    border: 1px solid rgba(167, 73, 73, 0.184);
+  }
+  
+  .beneficio h3 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 25px;
+    color: rgb(2, 61, 32);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .beneficio p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    color: #444;
+    line-height: 1.4;
+    background-color: rgb(243, 243, 243);
+    text-align: justify;
+  }
+  
+  #planos {
+    background-color: #f8f8f8;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  #planos h2 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: rgb(2, 61, 32);
+  }
+  
+  .cards-planos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .plano {
+    background-color: white;
+    border: 1px solid rgba(2, 61, 32, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .plano h3 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 24px;
+    color: rgb(2, 61, 32);
+    margin-bottom: 15px;
+  }
+  
+  .preco {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .valor {
+    font-size: 32px;
+    color: rgb(2, 61, 32);
+    font-weight: bold;
+  }
+  
+  .mensalidade {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .descricao-pequena,
+  .descricao-basica {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .botao-plano {
+    padding: 12px 24px;
+    border: 1px solid rgb(2, 61, 32);
+    border-radius: 30px;
+    background-color: rgb(2, 61, 32);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+  
+  .botao-plano:hover {
+    background-color: rgb(195, 25, 25);
+    border-color: rgb(195, 25, 25);
+  }
+  .plano:hover {
+    border: 2px solid rgb(195, 25, 25);
+    box-shadow: 0 0 12px 3px rgba(195, 25, 25, 0.5);
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .plano:hover .botao-plano {
+    background-color: rgb(195, 25, 25);
+    border-color: rgb(195, 25, 25);
+    box-shadow: 0 0 10px 2px rgba(195, 25, 25, 0.4);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  #contato {
+    background-color: #0f4c2bbb;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  #contato h2 {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 32px;
+    color: rgb(2, 61, 32);
+    margin-bottom: 20px;
+  }
+  
+  .info-contato {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    margin: 5px 0 15px;
+  }
+  
+  .form-contato {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+  }
+  
+  .form-contato input,
+  .form-contato textarea {
+    padding: 12px;
+    border: 1px solid rgba(2, 61, 32, 0.2);
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  .form-contato textarea {
+    min-height: 120px;
+  }
+  
+  .form-contato button {
+    padding: 10px;
+    background-color: rgb(2, 61, 32);
+    width: 100px;
+    color: white;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+    transition: background-color 0.3s;
+  }
+  
+  .form-contato button:hover {
+    background-color: rgb(7, 41, 21);
+  }
+
+  #faqs {
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  
+
+
+  .mensagem-sucesso {
+  display: none;
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #a7f3d0;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* evita clicar quando invisível */
+}
+
+.mensagem-sucesso.ativo {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}

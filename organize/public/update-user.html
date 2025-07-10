@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/organize/public/imgs/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/update-user.css">
+    <script src="./js/update-user.js" defer></script>
+
+</head>
+<body>
+    <div class="update-container">
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="user">Meu Perfil</button>
+            <button class="tab-btn" data-tab="bakery">Minha Confeitaria</button>
+        </div>
+
+        <!-- COLE AQUI O MESSAGE GROUP -->
+        <div class="message-group" style="display: none;">
+            <i class="fas fa-info-circle"></i>
+            <span id="message-text"></span>
+        </div>
+
+        
+        <div class="tab-content active" id="user-tab">
+            <div class="header">
+                <h1>Atualizar Perfil</h1>
+                <p>Mantenha suas informações pessoais sempre atualizadas</p>
+            </div>
+
+        <div class="success-message" id="successMessage">
+            ✓ Perfil atualizado com sucesso!
+        </div>
+
+        <form id="updateForm">
+            <div class="photo-section">
+                <div class="photo-preview" id="photoPreview">
+                    <div class="photo-placeholder"></div>
+                </div>
+                <div class="photo-upload">
+                    <input type="file" id="photoInput" accept="image/*">
+                    <label for="photoInput">Alterar Foto</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </div>
+        </form>
+        </div>
+
+        <div class="tab-content" id="bakery-tab">
+            <div class="header">
+                <h1>Dados da Confeitaria</h1>
+                <p>Atualize as informações do seu negócio</p>
+            </div>
+
+            <div class="success-message" id="bakerySuccessMessage">
+                ✓ Dados da confeitaria atualizados com sucesso!
+            </div>
+
+            <form id="bakeryForm">
+                <div class="form-group">
+                    <label for="nome_fantasia">Nome Fantasia</label>
+                    <input type="text" id="nome_fantasia" name="nome_fantasia" placeholder="Nome da sua confeitaria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço Completo</label>
+                    <textarea id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade - UF, CEP" rows="3" required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn btn-secondary" id="bakeryCancelBtn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cal Sans', sans-serif;
+  height: 100vh;
+  background-color: #f4f7f6;
+  overflow-x: hidden;
+}
+
+/* Container Principal */
+.container-criar-conta {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lado Esquerdo - Área Promocional */
+.lado-esquerdo {
+  flex: 1;
+  background-color: rgb(2, 61, 32);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.8rem;
+}
+
+.logo-area h3 {
+  font-size: 1.3rem;
+}
+
+.texto-impacto {
+  margin: 3rem 0;
+}
+
+.texto-impacto h1 {
+  font-size: 5.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.destaque-vermelho {
+  color: #ba1212;
+  position: relative;
+  z-index: 1;
+}
+
+.destaque-vermelho::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 107, 107, 0.3);
+  z-index: -1;
+  transform: skewX(-5deg);
+}
+
+.beneficios {
+  margin-top: auto;
+}
+
+.beneficio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.beneficio-item i {
+  color: #98e2c6;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.beneficio-item p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Lado Direito - Área do Formulário */
+.lado-direito {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: linear-gradient(135deg, #f4f7f6 0%, #e8f0ed 100%);
+}
+
+.card-formulario {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-formulario:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo do Formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario h2 {
+  color: rgb(2, 61, 32);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #666;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Grupos de input com ícones */
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.input-group i.toggle-password {
+  left: auto;
+  right: 12px;
+  cursor: pointer;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input[type="password"] {
+  padding-right: 2.5rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: rgb(2, 61, 32);
+  box-shadow: 0 0 0 2px rgba(2, 61, 32, 0.1);
+}
+
+.termos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.termos a {
+  color: rgb(2, 61, 32);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.termos a:hover {
+  color: rgb(3, 100, 50);
+  text-decoration: underline;
+}
+
+/* Botão */
+button {
+  background-color: rgb(2, 61, 32);
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:hover {
+  background-color: rgb(3, 80, 42);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(2, 61, 32, 0.2);
+}
+
+button i {
+  font-size: 0.9rem;
+}
+
+/* Link para login */
+.login-link {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.login-link a {
+  color: rgb(2, 61, 32);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.login-link a:hover {
+  color: rgb(3, 100, 50);
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .texto-impacto h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-criar-conta {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .lado-esquerdo {
+    padding: 2rem;
+  }
+  
+  .texto-impacto {
+    margin: 1rem 0;
+  }
+  
+  .beneficios {
+    margin: 2rem 0;
+  }
+  
+  .card-formulario {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lado-esquerdo {
+    padding: 1.5rem;
+  }
+  
+  .texto-impacto h1 {
+    font-size: 1.8rem;
+  }
+  
+  .card-formulario {
+    padding: 1.5rem;
+  }
+  
+  .formulario h2 {
+    font-size: 1.5rem;
+  }
+  
+  .beneficio-item p {
+    font-size: 0.95rem;
+  }
+}
+
+.input-group select {
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.input-group select:focus {
+  outline: none;
+  border-color: rgb(2, 61, 32);
+  box-shadow: 0 0 0 2px rgba(2, 61, 32, 0.1);
+}
